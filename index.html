@@ -29,12 +29,13 @@
 
   <!-- Hero -->
   <section class="hero" id="about">
-    <img src="images/thchu1403.gif" alt="Ting-Hsuan Chu" class="hero-photo">
+    <img src="images/thchu1403.jpg" alt="Ting-Hsuan Chu" class="hero-photo">
     <div class="hero-content">
       <span class="hero-label">Design Researcher</span>
       <div style="display: flex; align-items: flex-end; gap: 1rem; flex-wrap: wrap; max-width: 540px;">
         <h1 class="hero-title">Hi, I'm<br>Ting-Hsuan.</h1>
-        <a href="resume_updated.html" target="_blank" class="btn-primary-new" style="margin-bottom: 0.25rem; margin-left: auto;">Resume
+        <a href="resume_updated.html" target="_blank" class="btn-primary-new"
+          style="margin-bottom: 0.25rem; margin-left: auto;">Resume
           ↗</a>
       </div>
       <hr class="hero-rule">
@@ -62,8 +63,7 @@
         <h2 class="section-title">Selected Projects</h2>
       </div>
       <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all">All Works</button>
-        <button class="filter-btn" data-filter="research">UX Research</button>
+        <button class="filter-btn active" data-filter="research">UX Research</button>
         <button class="filter-btn" data-filter="design">UX Design</button>
       </div>
     </div>
@@ -90,19 +90,17 @@
       </article>
 
       <article class="portfolio-item" data-category="research">
-        <a href="dialkb.html" class="portfolio-card">
+        <a href="keyboard.html" class="portfolio-card">
           <div class="card-image">
             <span class="card-year">2026</span>
-            <img src="images/dialkb/dialkb-0.jpg" alt="Dial Keyboard Research">
+            <img src="images/keyboard/keyboard-0.jpg" alt="Keyboard Research">
           </div>
           <div class="card-body">
             <div class="card-tags">
               <span class="tag tag-research">UX Research</span>
             </div>
-            <h3 class="card-title">Dial Keyboard</h3>
-            <p class="card-excerpt">Three-phase research with nearly 2,000 participants validating dial controls for
-              creatives, mapping collaboration shortcuts, and testing multi-device Bluetooth connectivity experiences.
-            </p>
+            <h3 class="card-title">Keyboard Research</h3>
+            <p class="card-excerpt">Three independent studies with nearly 2,000 participants exploring dial controls for creatives, collaboration shortcut priorities, and multi-device Bluetooth connectivity.</p>
           </div>
         </a>
       </article>
@@ -320,18 +318,30 @@
       (function () {
         var btns = document.querySelectorAll('.filter-btn');
         var items = document.querySelectorAll('.portfolio-item');
+
+        function applyFilter(filter) {
+          items.forEach(function (item) {
+            var cat = item.dataset.category;
+            var show = !filter || cat === filter || cat === 'both';
+            item.style.display = show ? 'block' : 'none';
+          });
+        }
+
         btns.forEach(function (btn) {
           btn.addEventListener('click', function () {
+            var isActive = btn.classList.contains('active');
             btns.forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            var filter = btn.dataset.filter;
-            items.forEach(function (item) {
-              var cat = item.dataset.category;
-              var show = filter === 'all' || cat === filter || cat === 'both';
-              item.style.display = show ? 'block' : 'none';
-            });
+            if (isActive) {
+              applyFilter(null); // deselect → show all
+            } else {
+              btn.classList.add('active');
+              applyFilter(btn.dataset.filter);
+            }
           });
         });
+
+        // Apply default filter on load
+        applyFilter('research');
       }());
   </script>
 

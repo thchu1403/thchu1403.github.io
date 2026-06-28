@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TING-HSUAN CHU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      /* Study tab row */
+      .study-tabs-wrap {
+        padding: 48px 0 0;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 0;
+      }
+      .study-tabs-wrap .container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .study-tab {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: var(--text-muted, #6B635B);
+        background: transparent;
+        border: 1px solid var(--border, #D9D2C5);
+        border-bottom: none;
+        border-radius: 6px 6px 0 0;
+        padding: 10px 22px 12px;
+        cursor: pointer;
+        letter-spacing: 0.04em;
+        transition: all 0.2s ease;
+        position: relative;
+        bottom: -1px;
+      }
+      .study-tab:hover {
+        color: var(--text-primary, #1A1A1A);
+        border-color: var(--text-muted, #6B635B);
+        border-bottom: none;
+      }
+      .study-tab.active {
+        background: #fff;
+        color: var(--text-primary, #1A1A1A);
+        border-color: var(--border, #D9D2C5);
+        border-bottom: 1px solid #fff;
+        font-weight: 600;
+      }
+
+      /* Each tab panel */
+      .study-panel {
+        border-top: 1px solid var(--border, #D9D2C5);
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="site-wrap">
+
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-icon">T</span>
+          <span>Ting-Hsuan <span class="nav-logo-accent">Chu</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#portfolio" class="nav-link">Work</a>
+          <a href="resume_updated.html" class="nav-link" target="_blank">Resume</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ====== SECTION 1: Research Summary ====== -->
+    <div class="site-section" id="about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-5">
+            <img src="images/keyboard/keyboard-0.jpg" alt="Keyboard Research" class="img-fluid">
+          </div>
+          <div class="col-lg-6 ml-auto section-title">
+            <h3>Keyboard Input Experience Research</h3>
+            <p class="mb-4">What does a keyboard need to be in an era of creative work, hybrid collaboration, and multi-device computing? This multi-phase research program explored three distinct frontiers of keyboard input: a customizable rotary dial for creative professionals, dedicated shortcut keys for virtual collaboration, and seamless multi-device Bluetooth connectivity for knowledge workers. Across three independent studies and nearly 2,000 participants, the program built an evidence base that directly shaped product strategy — from hardware feature prioritization to icon design and out-of-box experience.</p>
+            <blockquote class="blockquote">
+              <p>I was the lead UX researcher across all three studies, responsible for study design, screener development, participant recruitment, and synthesis. Each study addressed a distinct user need; together they formed a connected body of knowledge about where keyboard input is heading and what users expect from it.</p>
+              <p class="mb-0 d-flex align-items-center">
+                <img class="img-fluid mr-3" src="images/thchu.jpeg" alt="Ting-Hsuan Chu">
+                <cite>&mdash; Lead UX Researcher</cite>
+              </p>
+            </blockquote>
+            <div class="d-flex">
+              <ul class="list-unstyled ul-check success mr-5">
+                <li>Screener Survey Design</li>
+                <li>Quantitative Research</li>
+                <li>Concept Validation</li>
+                <li>Comparative Testing</li>
+              </ul>
+              <ul class="list-unstyled ul-check success mr-2">
+                <li>Icon &amp; UI Design Testing</li>
+                <li>Feature Prioritization</li>
+                <li>Iterative Study Design</li>
+                <li>Actionable Recommendations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== SECTION 2: Overall Stats ====== -->
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-8 section-title text-center mx-auto">
+            <h2 class="title text-primary mb-3">Research at a Glance</h2>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 text-center">
+            <div class="service h-100">
+              <h1>1,789</h1>
+              <p>Total Participants</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="service h-100">
+              <h1>3</h1>
+              <p>Research Studies</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="service h-100">
+              <h1>2</h1>
+              <p>Target User Groups</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== SECTION 3 + 4: Tabs + Panels ====== -->
+    <div class="study-tabs-wrap">
+      <div class="container">
+        <button class="study-tab active" data-tab="dial">Dial Keyboard</button>
+        <button class="study-tab" data-tab="shortcut">Shortcut Study</button>
+        <button class="study-tab" data-tab="bluetooth">Bluetooth Study</button>
+      </div>
+    </div>
+
+    <!-- TAB 1: Dial Keyboard -->
+    <div class="study-panel" id="tab-dial">
+
+      <div class="site-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 section-title text-center mx-auto">
+              <h2 class="title text-primary mb-3">Approach</h2>
+            </div>
+          </div>
+          <!-- Step 1 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-1.jpg" alt="Screener Design" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 1. Screener Design &amp; Participant Recruitment</h3>
+              <p class="mb-4">To ensure participants genuinely represented the target audience, I designed a detailed screener survey before the main study. Qualification criteria focused on creative software usage (Adobe Creative Suite, Blender, Maya, CAD tools) and weekly creative hours. This segmentation was critical — it ensured that feedback on the dial concept came from users whose workflows would actually benefit from rotary input, rather than general keyboard users.</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-2.jpg" alt="Dial Concept Survey" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 2. Large-Scale Concept Validation Survey</h3>
+              <p class="mb-4">With 574 qualified US participants, the survey validated the core dial concept and mapped the most compelling use cases. ~60–70% of creatives saw immediate value in dial-based controls, with the highest appeal in tasks involving repetitive parameter adjustments: brush size, zoom level, timeline scrubbing, and layer opacity. Top concerns centered on the learning curve for customization and setup complexity — insights that directly shaped the product's onboarding experience and default mapping strategy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 1 Results -->
+      <div class="site-section bg-light">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 section-title text-center mx-auto">
+              <h2 class="title text-primary mb-3">Result</h2>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 text-center">
+              <div class="service h-100">
+                <h1>574</h1>
+                <p>Survey Participants</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="service h-100">
+                <h1>~65%</h1>
+                <p>Positive Concept Reception</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="service h-100">
+                <h1>#1</h1>
+                <p>Use Case: Creative Tool Shortcuts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /tab-dial -->
+
+    <!-- TAB 2: Shortcut Study -->
+    <div class="study-panel" id="tab-shortcut" style="display:none">
+
+      <div class="site-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 section-title text-center mx-auto">
+              <h2 class="title text-primary mb-3">Approach</h2>
+            </div>
+          </div>
+          <!-- Step 1 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-3.jpg" alt="Collaboration Shortcut Pain Points" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 1. Collaboration App Pain Points &amp; Shortcut Demand</h3>
+              <p class="mb-4">With 379 external keyboard users qualified through screener criteria — daily keyboard usage, collaboration app reliance, and function key adoption — I mapped the friction points driving demand for dedicated hardware shortcuts. Participants reported consistent pain across Zoom, Microsoft Teams, Google Meet, and WebEx: inconsistent control placement between platforms, mis-clicks on crowded UIs, and the inability to trigger meeting actions without first switching focus away from the active window. Screen sharing, mute, and camera controls emerged as the highest-friction moments. Over 70% of participants said dedicated keyboard shortcuts would meaningfully improve their meeting productivity.</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-4.jpg" alt="Dedicated Shortcut Priority Ranking" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 2. Dedicated Shortcut Priority Ranking</h3>
+              <p class="mb-4">I asked participants to rank which collaboration actions they most wanted as dedicated hardware keys — surfacing a clear "core trio": Mute/Unmute ranked #1, Camera On/Off ranked #2, and Share Screen ranked #3, each by a significant margin over other controls. Beyond the core trio, participants also wanted quick access to chat panel, participant list, reactions, and captions. The data gave the product team a prioritized shortcut key set backed by both frequency of use and perceived time-criticality — the two factors that most strongly predicted demand for a physical key.</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-5.jpg" alt="Programmable Keys Research" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 3. Programmable Keys Usage &amp; Interest</h3>
+              <p class="mb-4">A separate section of the study examined programmable key behavior: 113 current users (30% of the sample) shared how they already assigned custom functions, while the remaining 257 users expressed their intent if such keys were available. Top applications for key assignment were Microsoft Teams, Zoom, and — notably — ChatGPT, which ranked above traditional tools like Excel and Outlook, signaling AI tool access as an emerging hardware priority. More than 75% of all participants rated programmable keys as highly beneficial. The main adoption barrier was not concept rejection but setup complexity: users wanted the capability, but needed a simpler configuration experience to actually use it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2 Results -->
+      <div class="site-section bg-light">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 section-title text-center mx-auto">
+              <h2 class="title text-primary mb-3">Result</h2>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 text-center">
+              <div class="service h-100">
+                <h1>379</h1>
+                <p>Survey Participants</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="service h-100">
+                <h1>#1</h1>
+                <p>Top Priority: Mute / Unmute</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="service h-100">
+                <h1>75%+</h1>
+                <p>Rate Programmable Keys as Highly Beneficial</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /tab-shortcut -->
+
+    <!-- TAB 3: Bluetooth Study -->
+    <div class="study-panel" id="tab-bluetooth" style="display:none">
+
+      <div class="site-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 section-title text-center mx-auto">
+              <h2 class="title text-primary mb-3">Approach</h2>
+            </div>
+          </div>
+          <!-- Step 1 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-6.jpg" alt="Bluetooth Connection Study" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 1. Connection Method &amp; Pairing Preference</h3>
+              <p class="mb-4">The third study addressed one of the most common pain points for knowledge workers who move between a laptop, desktop, and personal device: switching a keyboard between multiple machines. With 836 participants, I investigated preferences between USB dongle and direct Bluetooth connectivity, how users expect multi-device switching to work physically, and what interaction model (button placement, press behavior) felt most intuitive for channel switching on a 3-channel keyboard.</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-7.jpg" alt="Channel Icon Concept Testing" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 2. Channel Icon Concept Testing</h3>
+              <p class="mb-4">I tested multiple icon design concepts for the three Bluetooth channel keys — comparing Bluetooth symbols with numeric labels, device-type icons (laptop, phone, tablet), and hybrid approaches. Testing evaluated immediate comprehension, learnability, and confidence in switching. Findings identified the most intuitive design language for channel indication, providing the industrial design and software teams with a validated visual direction for the keyboard's physical key markings and the companion software UI.</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-5">
+              <img src="images/keyboard/keyboard-8.jpg" alt="Onboarding Insight" class="img-fluid">
+            </div>
+            <div class="col-lg-7 ml-auto section-title">
+              <h3>Step 3. Onboarding &amp; Setup Confidence</h3>
+              <p class="mb-4">A dedicated section of the study measured user confidence around peripheral setup. ~50% of participants felt comfortable setting up a new multi-device keyboard entirely on their own, while ~35% reported needing some guidance — and ~15% strongly preferred a guided setup flow. These findings directly informed the design of the out-of-box experience, pairing wizard, and help documentation, ensuring the product reached both confident power users and first-time Bluetooth keyboard owners.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3 Results -->
+      <div class="site-section bg-light">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 section-title text-center mx-auto">
+              <h2 class="title text-primary mb-3">Result</h2>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 text-center">
+              <div class="service h-100">
+                <h1>836</h1>
+                <p>Survey Participants</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="service h-100">
+                <h1>3-Ch</h1>
+                <p>Bluetooth Design Validated</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="service h-100">
+                <h1>~50%</h1>
+                <p>Self-Setup Ready</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /tab-bluetooth -->
+
+    <!-- ====== SECTION 5: Closing ====== -->
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+            <div class="row align-items-center">
+              <div class="col-lg-5 mb-5">
+                <img src="images/keyboard/keyboard-9.jpg" alt="Keyboard Research Final" class="img-fluid">
+              </div>
+              <div class="col-lg-7 ml-auto section-title">
+                <p class="mb-4">Spanning three research studies, this project built a holistic understanding of what creative professionals and knowledge workers need from a next-generation keyboard — from customizable dial controls and collaboration shortcuts to seamless multi-device connectivity. The findings directly shaped the dial keyboard product strategy: feature prioritization, hardware switch selection, UI design language, and user onboarding experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> Ting-Hsuan Chu</span>
+      </div>
+    </footer>
+  </div>
+
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('.study-tab');
+      var panels = document.querySelectorAll('.study-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) { t.classList.remove('active'); });
+          panels.forEach(function (p) { p.style.display = 'none'; });
+          tab.classList.add('active');
+          document.getElementById('tab-' + tab.dataset.tab).style.display = 'block';
+        });
+      });
+    }());
+  </script>
+
+  </body>
+</html>
